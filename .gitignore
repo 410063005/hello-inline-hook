@@ -1,0 +1,6 @@
+/.externalNativeBuild
+local.properties
+/.idea
+/.google
+app/.externalNativeBuild
+.gradle

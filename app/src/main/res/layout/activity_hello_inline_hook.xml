@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_hello_jni"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.hellojni.HelloInlineHookActivity">
+
+    <Button
+        android:id="@+id/btn_calc"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:text="计算"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/et_one" />
+
+    <Button
+        android:id="@+id/btn_hook"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:text="hook"
+        app:layout_constraintStart_toEndOf="@+id/btn_calc"
+        app:layout_constraintTop_toBottomOf="@+id/et_one" />
+
+    <Button
+        android:id="@+id/btn_unhook"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:text="unhook"
+        app:layout_constraintStart_toEndOf="@+id/btn_hook"
+        app:layout_constraintTop_toBottomOf="@+id/et_one" />
+
+    <EditText
+        android:id="@+id/et_two"
+        android:layout_width="50dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:gravity="center"
+        android:inputType="number"
+        android:text="1"
+        app:layout_constraintBaseline_toBaselineOf="@id/et_one"
+        app:layout_constraintStart_toEndOf="@+id/tv_minus" />
+
+    <EditText
+        android:id="@+id/et_one"
+        android:layout_width="50dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:gravity="center"
+        android:inputType="number"
+        android:text="2"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_equals"
+        android:layout_width="50dp"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="="
+        android:textSize="32sp"
+        app:layout_constraintBaseline_toBaselineOf="@+id/et_one"
+        app:layout_constraintStart_toEndOf="@id/et_two" />
+
+    <TextView
+        android:id="@+id/tv_value"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="1"
+        android:textSize="20sp"
+        app:layout_constraintBaseline_toBaselineOf="@id/et_one"
+        app:layout_constraintStart_toEndOf="@+id/tv_equals" />
+
+    <TextView
+        android:id="@+id/tv_minus"
+        android:layout_width="50dp"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="-"
+        android:textSize="32sp"
+        app:layout_constraintBaseline_toBaselineOf="@+id/et_one"
+        app:layout_constraintStart_toEndOf="@id/et_one" />
+
+</android.support.constraint.ConstraintLayout>
